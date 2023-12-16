@@ -1,5 +1,9 @@
-const Schedule= ()=>{
-  return <div>Schedule</div>
+const Schedule = () => {
+  return (
+    <>
+
+    </>
+  )
 }
 
 export default Schedule
