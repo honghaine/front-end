@@ -8,7 +8,7 @@ export default function UserLayout({
   return (
     <>
       <Header />
-      <div>{children}</div>
+      <div className="bg-white h-auto text-[#333]">{children}</div>
     </>
   )
 }
