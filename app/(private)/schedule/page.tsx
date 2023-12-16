@@ -1,5 +1,6 @@
 'use client'
 import CalenderSchedule from '@/components/CalenderSchedule'
+import MealSchedule from '@/components/CalenderSchedule/mealSchedule'
 import { Calendar } from '@/components/ui/calendar'
 import Image from 'next/image'
 import { useState } from 'react'
@@ -61,7 +62,9 @@ const Schedule = () => {
         </div>
       </div>
       <div className="w-auto flex-1">
-        <CalenderSchedule />
+        {state == 'workshop' && <CalenderSchedule />}
+        {state == 'meal' && <MealSchedule />}
+        
       </div>
     </div>
   )

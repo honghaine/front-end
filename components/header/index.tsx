@@ -1,7 +1,18 @@
+"use client"
 import Image from 'next/image'
 import Tab from './Tab'
 import SearchInput from './SearchInput'
+import { useState } from 'react'
+import DropdownNotification from './noti'
 const Header = () => {
+
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+
+  const toggleDropdown = () => {
+    setDropdownOpen(!dropdownOpen);
+  };
+
+
   return (
     <header className="bg-[#012E33] py-[31px] px-[41px]">
       <div className="flex justify-between items-center	">
@@ -23,13 +34,7 @@ const Header = () => {
           />
         </div>
         <div className="flex gap-8">
-          <Image
-            src="/icons/noti.svg"
-            alt="noti icon"
-            width={28}
-            height={28}
-            priority
-          />
+          <DropdownNotification></DropdownNotification>
           <div className="flex gap-4 h-[44px]">
             <div className="flex items-center justify-center">
               <Image
@@ -54,6 +59,7 @@ const Header = () => {
         <Tab />
         <SearchInput />
       </div>
+      
     </header>
   )
 }
