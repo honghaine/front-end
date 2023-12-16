@@ -20,7 +20,7 @@ const Schedule = () => {
 
   return (
     <div className="px-[41px] py-[31px] flex gap-9">
-      <div className="">
+      <div className="w-[377px]">
         <div className="flex items-center justify-between">
           <div className="text-4xl	font-medium	">Your Schedule</div>
           <Image
@@ -35,7 +35,7 @@ const Schedule = () => {
           {menuState.map((item) => (
             <div
               key={item.key}
-              className={`flex gap-[10px] px-6 py-[10px] border-y	 ${
+              className={`flex gap-[10px] px-6 py-[10px] border-y	 text-[#333] font-medium	${
                 item.key === state ? 'bg-[#CCDCDA]' : ''
               }`}
               onClick={() => setState(item.key)}
@@ -56,7 +56,7 @@ const Schedule = () => {
             mode="single"
             selected={date}
             onSelect={setDate}
-            className="rounded-md border"
+            className="rounded-2xl border"
           />
         </div>
       </div>
