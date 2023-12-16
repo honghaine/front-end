@@ -19,15 +19,11 @@ const page = () => {
                         <button className="Frame28 w-[289px] px-6 py-2.5 bg-slate-100 border border-gray-300 justify-start items-center gap-2.5 inline-flex">
                             <Image src={'/icons/arrow-right.svg'} width={20.5} height={20.5} alt={''} className="VuesaxTwotoneArrowRight w-[20.49px] h-[20.49px] justify-center items-center flex">
                             </Image>
-
                             <div className="VisaInformation text-zinc-800 text-base font-medium font-['Poppins'] leading-tight">Flight information</div>
                         </button>
                         <button className="Frame29 w-[289px] px-6 py-2.5 bg-slate-100 border border-gray-300 justify-start items-center gap-2.5 inline-flex">
-
                             <Image src={'/icons/arrow-right.svg'} width={20.5} height={20.5} alt={''} className="VuesaxTwotoneArrowRight w-[20.49px] h-[20.49px] justify-center items-center flex">
                             </Image>
-
-
                             <div className="VisaInformation text-zinc-800 text-base font-medium font-['Poppins'] leading-tight">Accomodation</div>
                         </button>
                     </div>
