@@ -2,7 +2,7 @@ import Image from 'next/image'
 import Card from '@/components/Card/Card';
 
 const WhereToGo= ()=>{
-  return <div className='ml-[42px] mt-[32px]'>
+  return <div className='mx-[42px] mt-[32px]'>
     <h1 className='mb-[23.5px] font-medium text-[40px]'>Where to go</h1>
     <div>
         <button className='border-solid border-[1px] border-[#435659] rounded-[45px] w-[133px] text-[16px] p-[16px] mb-[22px]'>
