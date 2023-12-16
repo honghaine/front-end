@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import Tab from './Tab'
+import SearchInput from './SearchInput'
 const Header = () => {
   return (
     <header className="bg-[#012E33] py-[31px] px-[41px]">
@@ -49,7 +50,10 @@ const Header = () => {
         </div>
       </div>
       <div className="my-6 bg-[#124247] h-[1px]" />
-      <Tab />
+      <div className="flex justify-between items-center">
+        <Tab />
+        <SearchInput />
+      </div>
     </header>
   )
 }
