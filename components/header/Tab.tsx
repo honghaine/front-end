@@ -27,7 +27,7 @@ const Tab = () => {
           className={`cursor-pointer px-4 py-4 font-medium leading-4 ${
             path === item.key
               ? 'bg-[#FD5B2F] text-[#333]'
-              : 'border border-[#435659]'
+              : 'border border-[#435659] text-[#FFF]'
           }`}
           onClick={() => router.push(item.key)}
           style={{ borderRadius: '45px' }}

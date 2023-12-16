@@ -12,7 +12,7 @@ const SearchInput = () => {
         placeholder="Search"
         type="text"
         style={{ outline: 'none', borderRadius: '45px' }}
-        className="px-4 py-4 border border-[#435659] leading-4 w-[400px] bg-transparent	pr-10"
+        className="px-4 py-4 border border-[#435659] leading-4 w-[400px] bg-transparent	pr-10 text-[#FFF]"
       />
       <Image
         src="/icons/search.svg"
