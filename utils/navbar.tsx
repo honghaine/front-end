@@ -65,7 +65,7 @@ const Navbar = () => {
                 >
 
                     <button className="NotificationStatus w-7 h-7 relative">
-                        <Image src={'/icons/notification-status.svg'} width={100} height={20.41} alt={''}></Image>
+                        <Image src={'/icons/notification-status.svg'} width={40} height={40} alt={''}></Image>
                     </button>
 
                     <div
