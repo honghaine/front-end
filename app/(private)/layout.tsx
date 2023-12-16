@@ -1,3 +1,4 @@
+import Header from '@/components/header'
 
 export default function UserLayout({
   children,
@@ -6,7 +7,7 @@ export default function UserLayout({
 }) {
   return (
     <>
-      <div>header</div>
+      <Header />
       <div>{children}</div>
     </>
   )
