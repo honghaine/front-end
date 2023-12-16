@@ -1,8 +1,14 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21" fill="none">
-  <path d="M10.2459 19.2765C14.9615 19.2765 18.7843 15.4537 18.7843 10.7381C18.7843 6.02247 14.9615 2.19971 10.2459 2.19971C5.53028 2.19971 1.70752 6.02247 1.70752 10.7381C1.70752 15.4537 5.53028 19.2765 10.2459 19.2765Z" stroke="#838383" stroke-width="1.53691" stroke-linecap="round" stroke-linejoin="round"/>
-  <g opacity="0.54">
-    <path d="M7.25732 10.7383H12.3803" stroke="#838383" stroke-width="1.53691" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M10.6729 13.2998L13.2344 10.7383L10.6729 8.17676" fill="#838383"/>
-    <path d="M10.6729 13.2998L13.2344 10.7383L10.6729 8.17676" stroke="#838383" stroke-width="1.53691" stroke-linecap="round" stroke-linejoin="round"/>
-  </g>
+<svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="vuesax/twotone/arrow-right">
+<g id="arrow-right">
+<path id="Vector" d="M10.2459 18.7845C14.9615 18.7845 18.7843 14.9617 18.7843 10.2461C18.7843 5.53052 14.9615 1.70776 10.2459 1.70776C5.53028 1.70776 1.70752 5.53052 1.70752 10.2461C1.70752 14.9617 5.53028 18.7845 10.2459 18.7845Z" stroke="#838383" stroke-width="1.53691" stroke-linecap="round" stroke-linejoin="round"/>
+<g id="Group 646" opacity="0.54">
+<path id="Vector_2" d="M7.25732 10.2461H12.3803" stroke="#838383" stroke-width="1.53691" stroke-linecap="round" stroke-linejoin="round"/>
+<g id="Vector_3">
+<path d="M10.6729 12.8076L13.2344 10.2461L10.6729 7.68457" fill="#838383"/>
+<path d="M10.6729 12.8076L13.2344 10.2461L10.6729 7.68457" stroke="#838383" stroke-width="1.53691" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</g>
+</g>
+</g>
 </svg>
