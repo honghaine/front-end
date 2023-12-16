@@ -1,18 +1,29 @@
 import React, { useState } from 'react';
 import Image from 'next/image'
 import Link from 'next/link';
+import 'react-notifications/lib/notifications.css';
+import {NotificationContainer, NotificationManager} from 'react-notifications';
 
 const DropdownNotification = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
+
+  const click2 = () => {
+    toggleDropdown();
+    handle();
+  }
 
   const toggleDropdown = () => {
     setDropdownOpen(!dropdownOpen);
   };
 
+  const handle = () => {
+    NotificationManager.info('Lunch time: Your lunch is option 1');
+  }
+
   return (
     <div className="flex gap-4 h-[44px]">
       <div className="flex gap-4 h-[44px]" x-data="{ dropdownOpen: false }">
-        <button onClick={toggleDropdown} >
+        <button onClick={click2}  >
         <Image
             src="/icons/noti.svg"
             alt="second-logo icon"
@@ -32,7 +43,7 @@ const DropdownNotification = () => {
                 <Link href="/schedule" className="flex items-center px-4 py-3 border-b hover:bg-gray-100 -mx-2">
                   <Image width={8} height={8} className="h-8 w-8 rounded-full object-cover mx-1" src="/images/img5.png" alt="avatar" ></Image>
                   <p className="text-gray-600 text-sm mx-2">
-                    <span className="font-bold">Lunch time</span>
+                    <span className="font-bold">Lunch time: Your lunch is option 1</span>
                   </p>
                 </Link>
                 {/* Add more notification items here */}
@@ -42,6 +53,7 @@ const DropdownNotification = () => {
           </>
         )}
       </div>
+      <NotificationContainer/>
     </div>
   );
 };
