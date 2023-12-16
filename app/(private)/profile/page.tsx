@@ -2,9 +2,9 @@
 import React, { useState } from 'react'
 import Image from 'next/image'
 import SideBar from '@/components/Profile/SideBar'
-import Visa from './visa/page'
-import Flight from './flight/page'
-import Accomodation from './accomodation/page'
+import Visa from '../../../components/Profile/Visa'
+import Flight from '../../../components/Profile/Flight'
+import Accomodation from '../../../components/Profile/Accomodation'
 
 const Profile = () => {
     const [name, setName] = useState({
