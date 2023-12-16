@@ -5,6 +5,17 @@ import Image from 'next/image'
 import { useState } from 'react'
 
 const Schedule = () => {
+  const [state, setState] = useState('workshop')
+  const menuState = [
+    {
+      key: 'workshop',
+      value: 'Workshop schedule',
+    },
+    {
+      key: 'meal',
+      value: 'Meal schedule',
+    },
+  ]
   const [date, setDate] = useState<Date | undefined>(new Date())
 
   return (
@@ -19,6 +30,26 @@ const Schedule = () => {
             height={52}
             priority
           />
+        </div>
+        <div className="my-6 py-[42.5px] border rounded-2xl cursor-pointer	">
+          {menuState.map((item) => (
+            <div
+              key={item.key}
+              className={`flex gap-[10px] px-6 py-[10px] border-y	 ${
+                item.key === state ? 'bg-[#CCDCDA]' : ''
+              }`}
+              onClick={() => setState(item.key)}
+            >
+              <Image
+                src="/icons/arrow-right.svg"
+                alt="arrow-right icon"
+                width={20}
+                height={20}
+                priority
+              />
+              <div>{item.value}</div>
+            </div>
+          ))}
         </div>
         <div>
           <Calendar
