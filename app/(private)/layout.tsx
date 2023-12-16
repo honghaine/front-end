@@ -6,7 +6,6 @@ export default function UserLayout({
 }) {
   return (
     <>
-      <div>header</div>
       <div>{children}</div>
     </>
   )
