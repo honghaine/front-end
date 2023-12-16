@@ -7,6 +7,12 @@ import dayjs from 'dayjs'
 import { listEvent } from './mockup'
 import './style.scss'
 import Image from 'next/image'
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from '@/components/ui/tooltip'
 const CalenderSchedule = () => {
   const detailSchedule = ['link', 'participant', 'estimate', 'email']
   return (
@@ -38,7 +44,7 @@ const CalenderSchedule = () => {
         allDaySlot={false}
         slotDuration="01:00"
         expandRows
-        stickyHeaderDates={true}
+        // stickyHeaderDates={true}
         aspectRatio={0.7}
         slotLabelContent={(item) => (
           <div className="text-[#333] text-base font-medium uppercase text-left">
@@ -50,44 +56,50 @@ const CalenderSchedule = () => {
         eventBackgroundColor="#CCDCDA"
         eventBorderColor="#CCDCDA"
         eventContent={(eventInfo) => (
-          <div className="group relative flex justify-center">
-            <div className="px-3 py-3">
-              <div className="text-[#333] font-medium mb-2 text-base">
-                {eventInfo.event.title}
-              </div>
-              <div className="text-[#333] font-medium">
-                {dayjs(eventInfo.event.start).format('h:mm A')} -{' '}
-                {dayjs(eventInfo.event.end).format('h:mm A')}
-              </div>
-            </div>
-            <span
-              className="absolute right-0 bottom-[-50px] w-max	 scale-0 transition-all bg-[#FFF] p-6 rounded-xl text-[#333] group-hover:scale-100"
-              style={{ boxShadow: '2px 18px 17.6px 0px #C9DFDD' }}
-            >
-              <div className="flex flex-col gap-[21px]">
-                <div className="text-xl font-medium">
-                  {eventInfo.event.title}
+          <TooltipProvider>
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <div className="px-3 py-3">
+                  <div className="text-[#333] font-medium mb-2 text-base">
+                    {eventInfo.event.title}
+                  </div>
+                  <div className="text-[#333] font-medium">
+                    {dayjs(eventInfo.event.start).format('h:mm A')} -{' '}
+                    {dayjs(eventInfo.event.end).format('h:mm A')}
+                  </div>
                 </div>
-                <div className="text-base	font-normal">
-                  {eventInfo.event.extendedProps.bookingTime}
+              </TooltipTrigger>
+              <TooltipContent
+                style={{ boxShadow: '2px 18px 17.6px 0px #C9DFDD' }}
+              >
+                <div className="flex flex-col gap-[21px] text-[#333]">
+                  <div className="text-xl font-medium">
+                    {eventInfo.event.title}
+                  </div>
+                  <div className="text-base	font-normal">
+                    {eventInfo.event.extendedProps.bookingTime}
+                  </div>
+                  <div className="h-px bg-[#C9D5D6] "></div>
+                  <div className="flex flex-col gap-[10px]">
+                    {detailSchedule.map((item) => (
+                      <div
+                        className="flex gap-[10px] items-center text-base	"
+                        key={item}
+                      >
+                        <Image
+                          src="/icons/add.svg"
+                          width={20}
+                          height={20}
+                          alt="add icon"
+                        />
+                        <div>{eventInfo.event.extendedProps[item]}</div>
+                      </div>
+                    ))}
+                  </div>
                 </div>
-                <div className="h-px bg-[#C9D5D6] "></div>
-                <div className="flex flex-col gap-[10px]">
-                  {detailSchedule.map((item) => (
-                    <div className="flex gap-[10px]" key={item}>
-                      <Image
-                        src="/icons/add.svg"
-                        width={20}
-                        height={20}
-                        alt="add icon"
-                      />
-                      <div>{eventInfo.event.extendedProps[item]}</div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </span>
-          </div>
+              </TooltipContent>
+            </Tooltip>
+          </TooltipProvider>
         )}
       />
     </div>
