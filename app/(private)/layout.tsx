@@ -1,3 +1,4 @@
+import Header from '@/components/header'
 
 export default function UserLayout({
   children,
@@ -6,7 +7,8 @@ export default function UserLayout({
 }) {
   return (
     <>
-      <div>{children}</div>
+      <Header />
+      <div className="bg-white h-auto text-[#333]">{children}</div>
     </>
   )
 }
