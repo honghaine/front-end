@@ -267,5 +267,155 @@ export const listEvent = [
     participant: '8 participants',
     estimate: '45 mins',
     email: 'example@gmail.com',
-  },
+  },  
+  {
+    id: '1',
+    title: 'Agenda of planning week',
+    start: '2023-12-17T09:00:00+07:00',
+    end: '2023-12-17T10:15:00+07:00',
+    bookingTime: `${dayjs('2023-12-17T02:00:00+00:30').format('dddd')}, ${dayjs(
+    '2023-12-17T02:00:00+00:00'
+    ).format('DD MMM')}, ${dayjs('2023-12-17T02:00:00+00:00').format(
+      'h:mm'
+    )} - ${dayjs('2023-12-17T02:00:00+00:00').format('h:mm A')}`,
+    link: 'https://meet.bmg.com/gyh-dcma-gvo',
+    participant: '80 participants',
+    estimate: '45 mins',
+    email: 'example@gmail.com',
+  },  
+  {
+    id: '2',
+    title: 'Product vision',
+    start: '2023-12-17T10:15:00+07:00',
+    end: '2023-12-17T12:00:00+07:00',
+    bookingTime: `${dayjs('2023-12-17T02:00:00+00:30').format('dddd')}, ${dayjs(
+    '2023-12-17T02:00:00+00:00'
+    ).format('DD MMM')}, ${dayjs('2023-12-17T02:00:00+00:00').format(
+      'h:mm'
+    )} - ${dayjs('2023-12-17T02:00:00+00:00').format('h:mm A')}`,
+    link: 'https://meet.bmg.com/gyh-dcma-gvo',
+    participant: '80 participants',
+    estimate: '45 mins',
+    email: 'example@gmail.com',
+  },   
+  {
+    id: '3',
+    title: 'Inspect & Adapt',
+    start: '2023-12-17T13:00:00+07:00',
+    end: '2023-12-17T17:00:00+07:00',
+    bookingTime: `${dayjs('2023-12-17T02:00:00+00:30').format('dddd')}, ${dayjs(
+    '2023-12-17T02:00:00+00:00'
+    ).format('DD MMM')}, ${dayjs('2023-12-17T02:00:00+00:00').format(
+      'h:mm'
+    )} - ${dayjs('2023-12-17T02:00:00+00:00').format('h:mm A')}`,
+    link: 'https://meet.bmg.com/gyh-dcma-gvo',
+    participant: '80 participants',
+    estimate: '45 mins',
+    email: 'example@gmail.com',
+  },  
+  {
+    id: '4',
+    title: 'Inspect & Adapt - Problem Solving workshop',
+    start: '2023-12-18T09:00:00+07:00',
+    end: '2023-12-18T12:00:00+07:00',
+    bookingTime: `${dayjs('2023-12-17T02:00:00+00:30').format('dddd')}, ${dayjs(
+    '2023-12-17T02:00:00+00:00'
+    ).format('DD MMM')}, ${dayjs('2023-12-17T02:00:00+00:00').format(
+      'h:mm'
+    )} - ${dayjs('2023-12-17T02:00:00+00:00').format('h:mm A')}`,
+    link: 'https://meet.bmg.com/gyh-dcma-gvo',
+    participant: '80 participants',
+    estimate: '45 mins',
+    email: 'example@gmail.com',
+  },  
+  {
+    id: '5',
+    title: 'Cont Inspect & Adapt - Problem Solving workshop',
+    start: '2023-12-18T13:00:00+07:00',
+    end: '2023-12-18T17:00:00+07:00',
+    bookingTime: `${dayjs('2023-12-17T02:00:00+00:30').format('dddd')}, ${dayjs(
+    '2023-12-17T02:00:00+00:00'
+    ).format('DD MMM')}, ${dayjs('2023-12-17T02:00:00+00:00').format(
+      'h:mm'
+    )} - ${dayjs('2023-12-17T02:00:00+00:00').format('h:mm A')}`,
+    link: 'https://meet.bmg.com/gyh-dcma-gvo',
+    participant: '80 participants',
+    estimate: '45 mins',
+    email: 'example@gmail.com',
+  },  
+  {
+    id: '6',
+    title: 'Bus arrive for pick up to restaurant',
+    start: '2023-12-18T17:00:00+07:00',
+    end: '2023-12-18T17:30:00+07:00',
+    bookingTime: `${dayjs('2023-12-17T02:00:00+00:30').format('dddd')}, ${dayjs(
+    '2023-12-17T02:00:00+00:00'
+    ).format('DD MMM')}, ${dayjs('2023-12-17T02:00:00+00:00').format(
+      'h:mm'
+    )} - ${dayjs('2023-12-17T02:00:00+00:00').format('h:mm A')}`,
+    link: 'https://meet.bmg.com/gyh-dcma-gvo',
+    participant: '80 participants',
+    estimate: '45 mins',
+    email: 'example@gmail.com',
+  },      
+  {
+    id: '10',
+    title: 'Function Dinner',
+    start: '2023-12-18T18:30:00+07:00',
+    end: '2023-12-18T20:00:00+07:00',
+    bookingTime: `${dayjs('2023-12-17T02:00:00+00:30').format('dddd')}, ${dayjs(
+    '2023-12-17T02:00:00+00:00'
+    ).format('DD MMM')}, ${dayjs('2023-12-17T02:00:00+00:00').format(
+      'h:mm'
+    )} - ${dayjs('2023-12-17T02:00:00+00:00').format('h:mm A')}`,
+    link: 'https://meet.bmg.com/gyh-dcma-gvo',
+    participant: '80 participants',
+    estimate: '45 mins',
+    location: 'hehe'
+  },    
+  {
+    id: '7',
+    title: 'Planning adjustments',
+    start: '2023-12-19T09:00:00+07:00',
+    end: '2023-12-19T12:00:00+07:00',
+    bookingTime: `${dayjs('2023-12-17T02:00:00+00:30').format('dddd')}, ${dayjs(
+    '2023-12-17T02:00:00+00:00'
+    ).format('DD MMM')}, ${dayjs('2023-12-17T02:00:00+00:00').format(
+      'h:mm'
+    )} - ${dayjs('2023-12-17T02:00:00+00:00').format('h:mm A')}`,
+    link: 'https://meet.bmg.com/gyh-dcma-gvo',
+    participant: '80 participants',
+    estimate: '45 mins',
+    email: 'example@gmail.com',
+  },    
+  {
+    id: '8',
+    title: 'Planning retrospective',
+    start: '2023-12-19T13:00:00+07:00',
+    end: '2023-12-19T17:00:00+07:00',
+    bookingTime: `${dayjs('2023-12-17T02:00:00+00:30').format('dddd')}, ${dayjs(
+    '2023-12-17T02:00:00+00:00'
+    ).format('DD MMM')}, ${dayjs('2023-12-17T02:00:00+00:00').format(
+      'h:mm'
+    )} - ${dayjs('2023-12-17T02:00:00+00:00').format('h:mm A')}`,
+    link: 'https://meet.bmg.com/gyh-dcma-gvo',
+    participant: '80 participants',
+    estimate: '45 mins',
+    email: 'example@gmail.com',
+  },  
+  {
+    id: '9',
+    title: 'Bus arrive for pick up to hotel',
+    start: '2023-12-19T17:00:00+07:00',
+    end: '2023-12-19T17:30:00+07:00',
+    bookingTime: `${dayjs('2023-12-17T02:00:00+00:30').format('dddd')}, ${dayjs(
+    '2023-12-17T02:00:00+00:00'
+    ).format('DD MMM')}, ${dayjs('2023-12-17T02:00:00+00:00').format(
+      'h:mm'
+    )} - ${dayjs('2023-12-17T02:00:00+00:00').format('h:mm A')}`,
+    link: 'https://meet.bmg.com/gyh-dcma-gvo',
+    participant: '80 participants',
+    estimate: '45 mins',
+    email: 'example@gmail.com',
+  },   
 ]
