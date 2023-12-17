@@ -10,11 +10,11 @@ const Accomodation = () => {
     };
     return (
         <div className="Frame13 w-[1530px] h-[682px] p-10 bg-white rounded-[20px] shadow flex-col justify-start items-start gap-8 inline-flex" style={{ marginTop: "32px", marginLeft: "20px" }}>
-            <div className="Accomodation text-zinc-800 text-xl font-medium font-['Poppins'] leading-normal">Accomodation</div>
+            <div className="Accomodation text-zinc-800 text-xl font-medium font-['Poppins'] leading-normal" style={{fontWeight: 600}}>Accomodation</div>
             <div className="Line2 self-stretch h-[0px] border border-gray-300"></div>
             <div className="Frame26 self-stretch justify-start items-end gap-5 inline-flex">
                 <div className="Frame13 w-[367px] flex-col justify-start items-start gap-2 inline-flex">
-                    <div className="FlightNumber text-zinc-800 text-base font-medium font-['Poppins'] leading-tight">Check-in date</div>
+                    <div className="FlightNumber text-zinc-800 text-base font-medium font-['Poppins'] leading-tight" style={{fontWeight: 600}}>Check-in date</div>
                     <div className="Frame3 self-stretch h-[54px] px-6 py-[18px] rounded border border-gray-300 justify-start items-center gap-2.5 inline-flex">
                         <div className="PleaseInsertYourEmail grow shrink basis-0 text-zinc-500 text-base font-normal font-['Poppins'] leading-tight">16/12/2023</div>
                         <div className="VuesaxTwotoneCalendar w-5 h-5 justify-center items-center flex">
@@ -24,7 +24,7 @@ const Accomodation = () => {
                     </div>
                 </div>
                 <div className="Frame14 w-[367px] flex-col justify-start items-start gap-2 inline-flex">
-                    <div className="FlightNumber text-zinc-800 text-base font-medium font-['Poppins'] leading-tight">Check-out date</div>
+                    <div className="FlightNumber text-zinc-800 text-base font-medium font-['Poppins'] leading-tight" style={{fontWeight: 600}}>Check-out date</div>
                     <div className="Frame3 self-stretch h-[54px] px-6 py-[18px] rounded border border-gray-300 justify-start items-center gap-2.5 inline-flex">
                         <div className="PleaseInsertYourEmail grow shrink basis-0 text-zinc-500 text-base font-normal font-['Poppins'] leading-tight">20/12/2023</div>
                         <div className="VuesaxTwotoneCalendar w-5 h-5 justify-center items-center flex">
@@ -34,7 +34,7 @@ const Accomodation = () => {
                     </div>
                 </div>
                 <div className="Frame19 w-[665px] flex-col justify-start items-start gap-[8.20px] inline-flex">
-                    <div className="FlightNumber text-zinc-800 text-base font-medium font-['Poppins'] leading-tight">Location</div>
+                    <div className="FlightNumber text-zinc-800 text-base font-medium font-['Poppins'] leading-tight" style={{fontWeight: 600}}>Location</div>
                     <div className="Frame3 self-stretch h-[55.33px] px-[24.59px] py-[18.44px] rounded border border-gray-300 justify-start items-center gap-[10.25px] inline-flex">
                         <div className="LamSonSquareBenNgheWardDistrict1Hcmc grow shrink basis-0 text-zinc-500 text-base font-normal font-['Poppins'] leading-tight">2 Lam Son Square, Ben Nghe ward, District 1, HCMC </div>
                         <button className="ViewOnMap text-red-500 text-base font-normal font-['Poppins'] underline leading-tight" onClick={toggleMapVisibility}>View on map</button>
@@ -47,11 +47,11 @@ const Accomodation = () => {
             </div>
             <div className="Frame31 justify-start items-start gap-5 inline-flex">
                 <div className="Frame30 flex-col justify-start items-start gap-6 inline-flex">
-                    <div className="ParkHyattSaigonParkDeluxeRoom text-zinc-800 text-base font-medium font-['Poppins'] leading-tight">Park Hyatt Saigon - Park deluxe room</div>
+                    <div className="ParkHyattSaigonParkDeluxeRoom text-zinc-800 text-base font-medium font-['Poppins'] leading-tight" style={{fontWeight: 600}}>Park Hyatt Saigon - Park deluxe room</div>
                     <Image className="Rectangle8 w-[367px] h-[253.45px]" src="/icons/room.png" width={367} height={253} alt={''} ></Image>
                 </div>
                 <div className="Frame32 flex-col justify-start items-start gap-5 inline-flex">
-                    <div className="RoomAmenities text-zinc-800 text-base font-medium font-['Poppins'] leading-tight">Room amenities</div>
+                    <div className="RoomAmenities text-zinc-800 text-base font-medium font-['Poppins'] leading-tight" style={{fontWeight: 600}}>Room amenities</div>
                     <div className="LedTvBoseBluetoothSpeakerNespressoCoffeeMakerIndividuallyControlledAirConditioningLeLaboBathroomAmenitiesInRoomSafeMinibarSpeakerphoneAndDataportHairDryerIronAndIroningBoardCribUponRequest w-[615.82px] text-zinc-500 text-base font-normal font-['Poppins'] leading-[22.95px]">48” LED TV<br />Bose bluetooth speaker<br />Nespresso coffee maker<br />Individually controlled air conditioning<br />Le Labo bathroom amenities<br />In-room safe<br />Minibar<br />Speakerphone and Dataport<br />Hair dryer<br />Iron and ironing board<br />Crib upon request</div>
                 </div>
                 {isMapVisible && (

@@ -30,7 +30,7 @@ const Tab = () => {
               : 'border border-[#435659] text-[#FFF]'
           }`}
           onClick={() => router.push(item.key)}
-          style={{ borderRadius: '45px' }}
+          style={{ borderRadius: '45px', fontWeight:600, letterSpacing:'-0.96px' }}
         >
           {item.text}
         </div>

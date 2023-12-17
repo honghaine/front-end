@@ -38,7 +38,7 @@ const SideBar = ({ name, setName }) => {
                     >
                         <Image src={'/icons/arrow-right.svg'} width={20.5} height={20.5} alt={''} className="VuesaxTwotoneArrowRight w-[20.49px] h-[20.49px] justify-center items-center flex">
                         </Image>
-                        <div className="VisaInformation text-zinc-800 text-base font-medium font-['Poppins'] leading-tight">{item.text}</div>
+                        <div className="VisaInformation text-zinc-800 text-base font-medium font-['Poppins'] leading-tight" style={{fontWeight: 600}}>{item.text}</div>
                     </button>
                 ))}
             </div>
