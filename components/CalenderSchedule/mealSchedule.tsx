@@ -1,33 +1,56 @@
 'use client'
-import dayGridPlugin from '@fullcalendar/daygrid'
-import interactionPlugin from '@fullcalendar/interaction'
-import FullCalendar from '@fullcalendar/react'
-import timeGridPlugin from '@fullcalendar/timegrid'
-import dayjs from 'dayjs'
-import { listEvent } from './mockup'
-import './style.scss'
-import Image from 'next/image'
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
 } from '@/components/ui/tooltip'
+import dayGridPlugin from '@fullcalendar/daygrid'
+import interactionPlugin from '@fullcalendar/interaction'
+import FullCalendar from '@fullcalendar/react'
+import timeGridPlugin from '@fullcalendar/timegrid'
+import dayjs from 'dayjs'
+import Image from 'next/image'
+import { useSetState } from 'react-use'
+import { listFood } from './mockup'
+import './style.scss'
 const MealSchedule = () => {
-  const detailSchedule = ['option', 'description']
+  const obj = {}
+  listFood.forEach((element) => {
+    obj[element.id] = element.menu
+  })
+  const [activeFood, setActiveFood] = useSetState(obj)
+  const handleUpdateActive = (id, foodId) => {
+    const newMenu = activeFood[id].map((item) => {
+      if (item.id === foodId) {
+        item.isActive = true
+      } else {
+        item.isActive = false
+      }
+      return item
+    })
+    setActiveFood({ [id]: newMenu })
+  }
+
   return (
     <div className="work-schedule">
       <FullCalendar
         key={'timeGridWeek'}
         plugins={[dayGridPlugin, interactionPlugin, timeGridPlugin]}
         initialView={'timeGridWeek'}
-        events={listEvent}
+        events={listFood}
         editable={true}
         titleFormat={{ year: 'numeric', month: 'short' }}
         droppable={true}
         headerToolbar={{
           left: 'today,title,prev,next',
+          center: 'description',
           right: null,
+        }}
+        customButtons={{
+          description: {
+            text: 'Meal schedule',
+          },
         }}
         dayHeaderClassNames="header-calender"
         dayHeaderContent={(content) => {
@@ -80,19 +103,50 @@ const MealSchedule = () => {
                     {eventInfo.event.extendedProps.bookingTime}
                   </div>
                   <div className="h-px bg-[#C9D5D6] "></div>
-                  <div className="flex flex-col gap-[10px]">
-                    {detailSchedule.map((item) => (
+                  <div className="flex flex-col gap-[21px]">
+                    <div className="text-[#686868] text-xs	font-normal	">
+                      {eventInfo.event.extendedProps.descriptions}
+                    </div>
+                    {eventInfo.event.extendedProps.menu.map((item) => (
                       <div
-                        className="flex gap-[10px] items-center text-base	"
-                        key={item}
+                        key={item.name}
+                        className={`p-2 rounded-lg ${
+                          activeFood[eventInfo.event.id]?.find(
+                            (data) => data.id === item.id
+                          ).isActive
+                            ? 'bg-[#CCDCDA]'
+                            : ''
+                        }`}
+                        onClick={() =>
+                          handleUpdateActive(eventInfo.event.id, item.id)
+                        }
                       >
-                        <Image
-                          src="/icons/add.svg"
-                          width={20}
-                          height={20}
-                          alt="add icon"
-                        />
-                        <div>{eventInfo.event.extendedProps[item]}</div>
+                        <div className="flex gap-3 mb-2">
+                          <Image
+                            src={item.img}
+                            alt={item.name}
+                            width={52}
+                            className="rounded-lg"
+                            height={52}
+                          />
+                          <div className="text-[#333] font-normal	text-base	flex items-center	">
+                            {item.desc}
+                          </div>
+                          <Image
+                            src={
+                              item.isActive
+                                ? '/icons/checked.svg'
+                                : '/icons/uncheck.svg'
+                            }
+                            alt={item.name}
+                            width={24}
+                            className="ml-auto"
+                            height={24}
+                          />
+                        </div>
+                        <div className="text-[#333] text-base	font-normal">
+                          {item.name}
+                        </div>
                       </div>
                     ))}
                   </div>

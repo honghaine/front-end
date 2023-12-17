@@ -27,7 +27,13 @@ const CalenderSchedule = () => {
         droppable={true}
         headerToolbar={{
           left: 'today,title,prev,next',
+          center: 'description',
           right: null,
+        }}
+        customButtons={{
+          description: {
+            text: 'Work schedule',
+          },
         }}
         dayHeaderClassNames="header-calender"
         dayHeaderContent={(content) => {

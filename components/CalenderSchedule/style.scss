@@ -42,5 +42,22 @@
       }
     }
 
+    .fc-toolbar-chunk {
+      .fc-description-button {
+        background-color: transparent;
+        outline: none;
+        color: #333;
+        border: none;
+        color: #333;
+        font-family: Poppins;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 92%;
+        letter-spacing: -1.2px;
+        text-transform: uppercase;
+      }
+    }
+
   }
 }
