@@ -52,7 +52,10 @@ const SignIn = () => {
           </div>
           <div className="h-[120px] " />
           <div className="px-[200px] flex-col justify-start items-start gap-11 flex">
-            <div className="WelcomeToOurOffice  text-zinc-800 text-[84px] font-medium font-['Poppins'] leading-[77.28px]">
+            <div
+              className="WelcomeToOurOffice  text-zinc-800 text-[84px] font-semibold	 font-['Poppins'] leading-[77.28px]"
+              style={{ letterSpacing: '-5.04px' }}
+            >
               Welcome to our office
             </div>
             <div className="Intro self-stretch text-zinc-800 text-base font-normal font-['Poppins'] leading-normal">

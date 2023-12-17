@@ -1,5 +1,4 @@
-import router, { useRouter } from 'next/navigation'
-import React from 'react'
+import { useRouter } from 'next/navigation'
 
 const Access = () => {
   const router = useRouter()
@@ -10,15 +9,6 @@ const Access = () => {
 
   return (
     <div className=" self-stretch p-10 bg-white rounded-[20px] shadow flex-col justify-start items-start gap-6 flex">
-      <div className="w-full">
-        <div
-          className="text-left  text-zinc-1500 text-2xl font-black font-['Poppins'] leading-[28.80px]"
-          id="txtTitle"
-        >
-          Quick access to your schedule
-        </div>
-      </div>
-
       <div
         className="w-full text-center text-zinc-800 text-base font-normal font-['Poppins'] leading-normal"
         id="txtMsg"
@@ -33,6 +23,8 @@ const Access = () => {
           style={{ width: '60px' }}
           placeholder="0"
           maxLength={1}
+          onChange={() => document.getElementById('input2').focus()}
+          id="input1"
         />
         <input
           type="text"
@@ -40,6 +32,8 @@ const Access = () => {
           style={{ width: '60px' }}
           placeholder="0"
           maxLength={1}
+          id="input2"
+          onChange={() => document.getElementById('input3').focus()}
         />
         <input
           type="text"
@@ -47,6 +41,8 @@ const Access = () => {
           style={{ width: '60px' }}
           placeholder="0"
           maxLength={1}
+          id="input3"
+          onChange={() => document.getElementById('input4').focus()}
         />
         <input
           type="text"
@@ -54,6 +50,7 @@ const Access = () => {
           style={{ width: '60px' }}
           placeholder="0"
           maxLength={1}
+          id="input4"
         />
       </div>
       <button
