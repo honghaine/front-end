@@ -32,7 +32,7 @@ const SignIn = () => {
   return (
     <main className="">
       <div className="grid h-screen grid-cols-[1127px_minmax(785px,_1fr)_0px] gap-2 grid-flow-col ">
-        <div className="grid1">
+        <div className="grid1 bg-slate-100">
           <div className="Frame7 self-stretch h-[95.86px] px-[42px] py-[31px] flex-col justify-start items-start gap-2.5 flex ">
             <div className="Frame8 justify-start items-center gap-[14.72px] flex">
               <Image className="Layer1" src="/icons/logoLogin.svg" alt="CLV Logo" width={139.135} height={33.864} />
