@@ -12,7 +12,7 @@ const Profile = () => {
     });
     return (
         <div>
-            <div className="PersonalInformation text-zinc-800 text-[40px] font-medium font-['Poppins'] leading-[36.80px]" style={{ marginTop: '32px', marginLeft: '41px' }}>Personal information</div>
+            <div className="PersonalInformation text-zinc-800 text-[40px] font-medium font-['Poppins'] leading-[36.80px]" style={{ marginTop: '32px', marginLeft: '41px', letterSpacing:'-2.4px', fontWeight:'600' }}>Personal information</div>
             <div className='flex'>
                 <SideBar name={name} setName={setName} ></SideBar>
                 {name.key === 'visa' && <Visa/>}

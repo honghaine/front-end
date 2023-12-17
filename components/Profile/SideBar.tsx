@@ -24,13 +24,15 @@ const SideBar = ({ name, setName }) => {
 
         },
     ]
-
+    // #CCDCDA
     return (
         <div className="Rectangle7 w-[290px] h-[681.53px] rounded-[20px] border border-gray-300" style={{ marginTop: '32px', marginLeft: '41px' }} >
             <div className="Frame29 w-[289px] h-[119.48px] flex-col justify-start items-start inline-flex" style={{ marginTop: '42px' }}>
                 {menu.map((item) => (
                     <button key={item.key}
-                        className={`${item.name === name.key ? 'bg-gray-300' : 'bg-slate-100'} Frame27 w-[289px] px-6 py-2.5 border justify-start items-center gap-2.5 inline-flex`}
+                        className={` 'bg-slate-100'} Frame27 w-[289px] px-6 py-2.5 border justify-start items-center gap-2.5 inline-flex`}
+                        style={{backgroundColor: item.name === name.key ? '#CCDCDA' : '#EDF6F5' }}
+
                         onClick={() => setName({ key: item.name })}
                         name={item.name}
                     >

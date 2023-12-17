@@ -163,9 +163,12 @@ const Navbar = () => {
                                 color: "#333333",
                                 fontSize: 16,
                                 fontFamily: "Poppins",
-                                fontWeight: 500,
+                                fontWeight: 600,
                                 lineHeight: "14.72px",
-                                wordWrap: "break-word"
+                                wordWrap: "break-word",
+                                letterSpacing:'-2.4px',
+                                
+
                             }}
                         >
                             Personal information

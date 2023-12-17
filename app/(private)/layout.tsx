@@ -10,8 +10,8 @@ export default function UserLayout({
     <>
       <Header />
       <div
-        className="bg-white h-auto text-[#333] overflow-auto"
-        style={{ height: 'calc(100vh - 216px)' }}
+        className="h-auto text-[#333] overflow-auto"
+        style={{ height: 'calc(100vh - 216px)', backgroundColor:'#EDF6F5' }}
       >
         {children}
       </div>
