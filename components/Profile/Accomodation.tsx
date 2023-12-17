@@ -50,15 +50,15 @@ const Accomodation = () => {
                     <div className="ParkHyattSaigonParkDeluxeRoom text-zinc-800 text-base font-medium font-['Poppins'] leading-tight" style={{fontWeight: 600}}>Park Hyatt Saigon - Park deluxe room</div>
                     <Image className="Rectangle8 w-[367px] h-[253.45px]" src="/icons/room.png" width={367} height={253} alt={''} ></Image>
                 </div>
-                <div className="Frame32 flex-col justify-start items-start gap-5 inline-flex">
+                <div className="Frame32 flex-col justify-start items-start gap-5 inline-flex" style={{width: '370px'}}>
                     <div className="RoomAmenities text-zinc-800 text-base font-medium font-['Poppins'] leading-tight" style={{fontWeight: 600}}>Room amenities</div>
-                    <div className="LedTvBoseBluetoothSpeakerNespressoCoffeeMakerIndividuallyControlledAirConditioningLeLaboBathroomAmenitiesInRoomSafeMinibarSpeakerphoneAndDataportHairDryerIronAndIroningBoardCribUponRequest w-[615.82px] text-zinc-500 text-base font-normal font-['Poppins'] leading-[22.95px]">48” LED TV<br />Bose bluetooth speaker<br />Nespresso coffee maker<br />Individually controlled air conditioning<br />Le Labo bathroom amenities<br />In-room safe<br />Minibar<br />Speakerphone and Dataport<br />Hair dryer<br />Iron and ironing board<br />Crib upon request</div>
+                    <div className="LedTvBoseBluetoothSpeakerNespressoCoffeeMakerIndividuallyControlledAirConditioningLeLaboBathroomAmenitiesInRoomSafeMinibarSpeakerphoneAndDataportHairDryerIronAndIroningBoardCribUponRequest w-full text-zinc-500 text-base font-normal font-['Poppins'] leading-[22.95px]">48” LED TV<br />Bose bluetooth speaker<br />Nespresso coffee maker<br />Individually controlled air conditioning<br />Le Labo bathroom amenities<br />In-room safe<br />Minibar<br />Speakerphone and Dataport<br />Hair dryer<br />Iron and ironing board<br />Crib upon request</div>
                 </div>
                 {isMapVisible && (
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.4411211704023!2d106.70088037570329!3d10.77748725917282!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f462f8cac37%3A0x3d4cc4e3c1887abb!2sPark%20Hyatt%20Saigon%20Hotel!5e0!3m2!1sen!2s!4v1702735771422!5m2!1sen!2s"
-                        width="600"
-                        height="400"
+                        width="670"
+                        height="300"
                         style={{ border: '0' }}
                         loading="lazy"
                         referrerPolicy="no-referrer-when-downgrade"
