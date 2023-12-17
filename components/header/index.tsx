@@ -1,26 +1,24 @@
-"use client"
+'use client'
 import Image from 'next/image'
 import Tab from './Tab'
 import SearchInput from './SearchInput'
 import { useState } from 'react'
 import DropdownNotification from './noti'
 const Header = () => {
-
-  const [dropdownOpen, setDropdownOpen] = useState(false);
-  const [showPopup, setShowPopup] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState(false)
+  const [showPopup, setShowPopup] = useState(false)
 
   const toggleDropdown = () => {
-    setDropdownOpen(!dropdownOpen);
-  };
+    setDropdownOpen(!dropdownOpen)
+  }
 
   const showReminderPopup = () => {
-    setShowPopup(true);
-  };
+    setShowPopup(true)
+  }
 
   const hideReminderPopup = () => {
-    setShowPopup(false);
-  };
-
+    setShowPopup(false)
+  }
 
   return (
     <header className="bg-[#012E33] py-[31px] px-[41px]">
@@ -56,36 +54,6 @@ const Header = () => {
               />
             </div>
 
-            <div >
-              <button className="fixed bottom-8 right-8 bg-green-500 text-white p-4 rounded-full cursor-pointer" onClick={showReminderPopup}>
-                <Image
-                  src="/icons/noti.svg"
-                  alt="avatar icon"
-                  className="rounded-full"
-                  width={44}
-                  height={44}
-                  priority
-                />
-              </button>
-            </div>
-
-            {showPopup && (
-              <div className="fixed bottom-4 right-4 bg-white border border-gray-300 p-4 rounded shadow-lg w-64 z-50 justify-between">
-                <div className="flex justify-end mb-4">
-                  <p className="font-bold mx-[70px]">Chat Box</p>
-                  <button onClick={hideReminderPopup}>&times;</button>
-                </div>
-                <div className="overflow-y-auto h-40">
-                  {/* Chat messages go here */}
-                  <div className="mb-2">User: Hello!</div>
-                  <div className="mb-2">Bot: Hi there!</div>
-                </div>
-                <input type="text" placeholder="Type your message" className="border border-gray-300 p-2 w-full" />
-                <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-2">Send</button>
-              </div>
-            )}
-
-
             <div className="flex flex-col">
               <div className="text-[#EDF6F5] font-medium	">Jason Cheng</div>
               <div className="text-[#EDF6F5] font-light	">Guest</div>
@@ -98,7 +66,6 @@ const Header = () => {
         <Tab />
         <SearchInput />
       </div>
-
     </header>
   )
 }
