@@ -1,10 +1,41 @@
-import React from 'react'
+"use client"
+import React, { useState } from 'react'
+import emailjs from 'emailjs-com';
 
-const LogIn = ({state, setState}) => {
-    
+const LogIn = ({ state, setState }) => {
+    const [to, setTo] = useState('');
+    const [subject, setSubject] = useState('');
+    const [body, setBody] = useState('');
+
     const handleClick = (e) => {
-        setState('access');
+        sendEmail(e);
     }
+
+    const sendEmail = async (e) => {
+        e.preventDefault();
+        setState('access');
+    
+        const templateParams = {
+            to,
+            subject,
+            body,
+        };
+    
+        const serviceId = 'service_v53akqf';
+        const templateId = 'template_xjepjo7';
+        const userID = 'BeeynK1p8_faV0LPz';
+
+    
+        try {
+            const response = await emailjs.send(serviceId, templateId, templateParams, userID);
+            console.log('hihi')
+            console.log('SUCCESS!', response.status, response.text);
+        } catch (error) {
+            console.log('FAILED...', error);
+        }
+    };
+    
+
 
     return (
         <div className=" self-stretch p-10 bg-white rounded-[20px] shadow flex-col justify-start items-start gap-6 flex">
