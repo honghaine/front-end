@@ -16,19 +16,22 @@ const Flight = () => {
 
             var currentDate = new Date();
 
-            // Lấy thông tin về ngày
-            var day = currentDate.getDate();
-            var month = currentDate.getMonth() + 1; // Tháng bắt đầu từ 0
+            var numbers = [1, 2, 3, 4];
+
+            var randomIndex = Math.floor(Math.random() * numbers.length);
+            var randomNumber = numbers[randomIndex];
+
+
+            var day = currentDate.getDate() + 3;
+            var month = currentDate.getMonth() + 1;
             var year = currentDate.getFullYear();
 
-            // Lấy thông tin về giờ
             var hours = currentDate.getHours() - 1;
-            var hoursNew = currentDate.getHours() + 7;
+            var hoursNew = currentDate.getHours() + randomNumber;
             var minutes = currentDate.getMinutes();
             var ampm = hours >= 12 ? 'PM' : 'AM';
 
             var ampmNew = hoursNew >= 12 ? 'PM' : 'AM';
-            // Định dạng lại chuỗi ngày và giờ
             var formattedDate = day + '/' + month + '/' + year;
             var formattedTime = hours % 12 + ':' + (minutes < 10 ? '0' : '') + minutes + ' ' + ampm;
             var formattedTimeNew = hoursNew % 12 + ':' + (minutes < 10 ? '0' : '') + minutes + ' ' + ampmNew;
