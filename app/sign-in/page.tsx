@@ -56,7 +56,7 @@ const SignIn = () => {
               className="WelcomeToOurOffice  text-zinc-800 text-[84px] font-semibold	 font-['Poppins'] leading-[77.28px]"
               style={{ letterSpacing: '-5.04px' }}
             >
-              Welcome to our office
+              Welcome to <br></br> our office
             </div>
             <div className="Intro self-stretch text-zinc-800 text-base font-normal font-['Poppins'] leading-normal">
               Experience seamless hospitality with our Vietnam office welcome
