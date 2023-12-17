@@ -10,9 +10,9 @@ const Card = ({src, customClass, title, description, width, height}:{src: string
             priority
             //fill={true}
         />
-        <div className='mt-[24px]'>
-            <h1 className='mb-[20px] text-[24px]'>{title}</h1>
-            <p>{description}</p>
+        <div className='mt-[24px]' style={{marginTop:"16px"}}>
+            <h1 className='mb-[20px] text-[24px]' style={{marginBottom:'0px'}}>{title}</h1>
+            <p style={{marginTop:"4px"}}>{description}</p>
         </div>
     </div>
   )
