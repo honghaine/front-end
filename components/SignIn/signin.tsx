@@ -10,7 +10,7 @@ const LogIn = ({state, setState}) => {
         <div className=" self-stretch p-10 bg-white rounded-[20px] shadow flex-col justify-start items-start gap-6 flex">
             <div className="w-full">
                 <div
-                    className="text-center QuickAccessToYourSchedule text-zinc-1500 text-2xl font-black font-['Poppins'] leading-[28.80px]"
+                    className="text-left QuickAccessToYourSchedule text-zinc-1500 text-2xl font-black font-['Poppins'] leading-[28.80px]"
                     id="txtTitle"
                 >
                     Quick access to your schedule
