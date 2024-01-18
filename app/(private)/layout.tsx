@@ -1,3 +1,5 @@
+// import ProtectedRoute from '@/components/ProtectedRoute'
+import Header from '@/components/header'
 
 export default function UserLayout({
   children,
@@ -6,8 +8,13 @@ export default function UserLayout({
 }) {
   return (
     <>
-      <div>header</div>
-      <div>{children}</div>
+      <Header />
+      <div
+        className="h-auto text-[#333] overflow-auto"
+        style={{ height: 'calc(100vh - 216px)', backgroundColor:'#EDF6F5' }}
+      >
+        {children}
+      </div>
     </>
   )
 }
